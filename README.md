@@ -17,7 +17,7 @@ Next.js Frontend + FastAPI Backend – Modern full-stack architecture for scalab
 High-Performance Inference – Supports Groq API, HuggingFace, or local embedding models for vector generation.
 
 🧱 Project Structure
-
+'''
 amazon-genai-recommender/
 │
 ├── backend/ # Backend (FastAPI)
@@ -41,4 +41,5 @@ amazon-genai-recommender/
 ├── data/ # Product dataset / vector store
 ├── docker-compose.yml # (Optional) Docker deployment file
 └── README.md # You are here
+'''
 
