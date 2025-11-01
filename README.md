@@ -1,45 +1,71 @@
-🧠 Amazon GenAI Recommender System (Cross-Selling Engine)
+# 🛍️ Amazon GenAI Recommender System
 
-A Generative AI–powered product recommendation system that redefines how e-commerce cross-selling works.
-Unlike traditional machine learning models, this system leverages LLMs (Large Language Models) and vector similarity to recommend products semantically related to user searches — mimicking the intelligence of Amazon-style recommendations.
+A **hybrid product recommendation platform** powered by **Generative AI, Embeddings, and Machine Learning**.  
+It leverages **LLM-based semantic understanding** to deliver **personalized and intelligent product recommendations** that outperform traditional ML-based recommendation systems.
 
-🚀 Features
-🧩 Core Highlights
+---
 
-Vector-Based Recommendation Engine – Embeds product descriptions into semantic space and finds the most similar ones.
+## 🌿 Overview
 
-LLM-Powered Understanding – Uses Transformer architectures to understand product meaning beyond keywords.
+Have you ever wondered how e-commerce platforms like Amazon or Flipkart show such accurate product suggestions?  
+This project replicates that logic — but in a **GenAI-powered way**.  
 
-Cross-Selling Optimization – Suggests complementary items, not just similar ones.
+Instead of relying solely on traditional ML algorithms, this system:
+- Converts product data into **vector embeddings**
+- Uses **semantic similarity search** to find related items
+- Leverages **LLM-based transformer architectures** to enhance recommendation accuracy
 
-Next.js Frontend + FastAPI Backend – Modern full-stack architecture for scalability and simplicity.
+---
 
-High-Performance Inference – Supports Groq API, HuggingFace, or local embedding models for vector generation.
+## 🧩 Architecture
 
-🧱 Project Structure
-'''
+This system is divided into **two main components** — each hosted on a separate **GitHub branch**:
+
+| Branch | Description |
+|:-------:|-------------|
+| **`main`** | 💻 Contains the **frontend** built using **Next.js + TypeScript** — a fully functional website interface |
+| **`backend`** | ⚙️ Contains the **backend API** built using **FastAPI + Python**, including vectorization, embeddings, and model logic |
+
+---
+
+## ⚙️ Tech Stack
+
+### 🧠 Backend (`backend` branch)
+- **FastAPI** — API framework for Python  
+- **Sentence Transformers / OpenAI Embeddings** — vector representation of products  
+- **FAISS / Cosine Similarity** — for fast semantic search  
+- **Pydantic + Uvicorn** — for validation and API serving  
+
+### 💻 Frontend (`main` branch)
+- **Next.js 14 + TypeScript** — modern full-stack React framework  
+- **TailwindCSS + ShadCN/UI** — for stunning UI components  
+- **React Hooks** — state and logic management  
+- **Axios** — connecting frontend with backend API  
+
+---
+
+## 📂 Project Structure
+
+```plaintext
 amazon-genai-recommender/
 │
-├── backend/ # Backend (FastAPI)
-│ ├── main.py # API entry point
-│ ├── routers/ # Contains route endpoints
-│ ├── utils/ # Helper functions for embeddings, similarity, etc.
-│ ├── ml_core/ # Machine learning and vectorization logic
-│ └── requirements.txt # Python dependencies
+├── backend/                      # Backend (FastAPI)
+│   ├── main.py                   # API entry point
+│   ├── routers/                  # Route definitions
+│   ├── utils/                    # Helper functions (embeddings, similarity, etc.)
+│   ├── ml_core/                  # Machine learning & vectorization logic
+│   ├── requirements.txt          # Python dependencies
+│   └── .env                      # Environment variables (not pushed)
 │
-├── .env # Environment variables (not pushed)
+├── frontend/                     # Frontend (Next.js + TypeScript)
+│   ├── app/                      # Next.js 13+ App Router
+│   ├── components/               # Reusable UI components (Shadcn/UI)
+│   ├── hooks/                    # Custom React hooks
+│   ├── public/                   # Static assets
+│   ├── package.json              # Node dependencies
+│   ├── tsconfig.json             # TypeScript config
+│   └── next.config.js            # Next.js config
 │
-├── frontend/ # Frontend (Next.js + TypeScript)
-│ ├── app/ # Next.js 13+ App Router
-│ ├── components/ # UI components built using shadcn/ui
-│ ├── hooks/ # Custom React hooks
-│ ├── public/ # Static assets
-│ ├── package.json # Node dependencies
-│ ├── tsconfig.json # TypeScript config
-│ └── next.config.js # Next.js config
-│
-├── data/ # Product dataset / vector store
-├── docker-compose.yml # (Optional) Docker deployment file
-└── README.md # You are here
-'''
-
+├── data/                         # Product dataset / vector store
+├── docker-compose.yml            # (Optional) Docker deployment setup
+└── README.md                     # You are here 😄
