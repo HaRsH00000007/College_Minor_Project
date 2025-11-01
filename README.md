@@ -69,5 +69,4 @@ amazon-genai-recommender/
 ├── data/                         # Product dataset / vector store
 ├── docker-compose.yml            # (Optional) Docker deployment setup
 └── README.md                     # You are here 😄
-```plaintext
-sdfsd
+
