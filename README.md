@@ -20,24 +20,25 @@ High-Performance Inference – Supports Groq API, HuggingFace, or local embeddin
 
 amazon-genai-recommender/
 │
-├── backend/                # Backend (FastAPI)
-│   ├── main.py             # API entry point
-│   ├── routers/            # Contains route endpoints
-│   ├── utils/              # Helper functions for embeddings, similarity, etc.
-│   ├── ml_core/            # Machine learning and vectorization logic
-│   ├── requirements.txt    # Python dependencies
-│   └── .env                # Environment variables (not pushed)
+├── backend/ # Backend (FastAPI)
+│ ├── main.py # API entry point
+│ ├── routers/ # Contains route endpoints
+│ ├── utils/ # Helper functions for embeddings, similarity, etc.
+│ ├── ml_core/ # Machine learning and vectorization logic
+│ └── requirements.txt # Python dependencies
 │
-├── frontend/               # Frontend (Next.js + TypeScript)
-│   ├── app/                # Next.js 13+ App Router
-│   ├── components/         # UI components built using shadcn/ui
-│   ├── hooks/              # Custom React hooks
-│   ├── public/             # Static assets
-│   ├── package.json        # Node dependencies
-│   ├── tsconfig.json       # TypeScript config
-│   └── next.config.js      # Next.js config
+├── .env # Environment variables (not pushed)
 │
-├── data/                   # Product dataset / vector store
-├── docker-compose.yml      # (Optional) Docker deployment file
-└── README.md               # You are here
+├── frontend/ # Frontend (Next.js + TypeScript)
+│ ├── app/ # Next.js 13+ App Router
+│ ├── components/ # UI components built using shadcn/ui
+│ ├── hooks/ # Custom React hooks
+│ ├── public/ # Static assets
+│ ├── package.json # Node dependencies
+│ ├── tsconfig.json # TypeScript config
+│ └── next.config.js # Next.js config
+│
+├── data/ # Product dataset / vector store
+├── docker-compose.yml # (Optional) Docker deployment file
+└── README.md # You are here
 
